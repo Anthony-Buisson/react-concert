@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <Link to={'/room'}>POSTS</Link>
+          <Link to={'/posts'}>POSTS</Link>
         </p>
         <a
           className="App-link"

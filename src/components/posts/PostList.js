@@ -1,12 +1,12 @@
-import './App.css';
+import '../../App.css';
 import axios from 'axios';
-import { BASE_URL } from "./env";
+import { BASE_URL } from "../../env";
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import PostListItem from "./PostListItem";
 
 const PostList = (props) => {
-    console.log(props)
     const {reduxPosts, addPost} = props;
     const [posts, setPosts] = useState([]);
     let url = BASE_URL+'/posts';
@@ -24,7 +24,7 @@ const PostList = (props) => {
       <header className="App-header">
           <Link to={'/'} >HOME</Link>
         <h1>Liste des posts, ({reduxPosts?.length ?? 0 }) total</h1>
-          {posts.map((r, index)=>(<p key={index}>{r.title}</p>))}
+          {posts.map((p, index)=>(<PostListItem post={p} key={index}></PostListItem>))}
       </header>
     </div>
   );

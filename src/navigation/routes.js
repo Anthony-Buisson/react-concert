@@ -1,5 +1,5 @@
 import App from "../App";
-import PostList  from "../PostList";
+import PostList  from "../components/posts/PostList";
 
 const routes = {
     home: {
