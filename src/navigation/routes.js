@@ -1,4 +1,4 @@
-import App from "../App";
+import App from "../views/App";
 import PostList  from "../components/posts/PostList";
 
 const routes = {
