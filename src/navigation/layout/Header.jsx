@@ -3,6 +3,7 @@ import HeaderItem from "./HeaderItem";
 import { Burger, Container } from '../../style/navigation/layout/Header.style';
 
 const HEADER_DROPDOWNS = [
+    { title: <img width={75} src={'https://e7.pngegg.com/pngimages/1013/770/png-clipart-eyedyllic-music-record-label-concert-logo-round-eyes-text-logo.png'} alt={'home'}/> , route: '/'},
     { title: 'Programmation', route: '/programmation', subLinks: [
         {title: 'Tous les évènements', route: '/programmation'},
         {title: 'Aix-en-Provence', route: '/programmation'},

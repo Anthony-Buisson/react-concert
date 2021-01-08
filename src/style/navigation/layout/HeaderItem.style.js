@@ -9,7 +9,8 @@ export const SubContainer = styled.div`
 
 export const HeaderLi = styled.li`
   list-style-type: none;
-  padding: 10px 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
       flex-direction: row;
   &:hover ${SubContainer} {

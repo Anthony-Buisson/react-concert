@@ -6,6 +6,7 @@ export const Container = styled.ul`
   display: none;
   flex-direction: column;
   height: 0;
+  width: 100%;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -17,7 +18,6 @@ export const Burger = styled.div`
   & img {
     height: 50px;
     width: auto;
-    transition-property: transform;
   }
   &:hover ${Container}, &:focus ${Container} {
     display: flex;
