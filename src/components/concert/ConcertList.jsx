@@ -1,25 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BASE_URL } from "../../env";
 import axios from "axios";
 import ConcertListItem from "./ConcertListItem";
+import ItemList from "../shared/Itemlist";
 import { Container } from "../../style/components/concert/ConcertList.style";
 
 let url = BASE_URL+'/concerts';
 
 const ConcertList = ( ) => {
-    const [concerts, setConcerts] = useState([]);
 
-    useEffect(()=>{
-        (async function fetchData() {
-            const { data } = await axios.get(url)
-            setConcerts(data)
-        })()
-    }, [])
+    async function fetchData() {
+        const { data } = await axios.get(url);
+        return data;
+    }
 
     return (
-        <Container>
-            {concerts.map(c=><ConcertListItem item={c} />)}
-        </Container>
+        <ItemList apiRequest={fetchData} renderItem={ConcertListItem} container={Container}/>
     )
 };
 

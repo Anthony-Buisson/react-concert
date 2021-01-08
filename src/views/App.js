@@ -5,7 +5,11 @@ import React from 'react';
 
 function App() {
   return (
+      <>
+      <h2>Prochainement dans nos salles</h2>
     <ConcertList />
+        <Link to={'/programmation'}>Voir toute la programmation</Link>
+    </>
   );
 }
 

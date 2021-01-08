@@ -8,11 +8,17 @@ export const Container = styled.div`
 
 export const ContainerInner = styled.div`
   margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
+  display: flex;
+`;
+
+export const Button = styled.button`
   border-radius: 10px; 
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
 `;
 
 export const Image = styled.span`
   background-color: red;
+  flex: 1;
 `;
