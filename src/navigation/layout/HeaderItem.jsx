@@ -5,7 +5,7 @@ const HeaderItem = ({ item }) => {
     const subItems = item.subLinks ? (
         <SubContainer role="menu">
             {item.subLinks.map(i=>(
-                <HeaderLink role="presentation" to={i.route} small>{i.title}</HeaderLink>
+                <HeaderLink role="presentation" to={i.route} isSmall>{i.title}</HeaderLink>
             ))}
         </SubContainer>
     ) : null;

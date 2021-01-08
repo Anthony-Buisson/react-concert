@@ -41,6 +41,10 @@ const routes = {
     compte: {
         route: '/compte',
         component: PostList
+    },
+    panier: {
+        route: '/panier',
+        component: PostList
     }
 }
 

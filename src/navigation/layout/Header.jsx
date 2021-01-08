@@ -30,7 +30,8 @@ const HEADER_DROPDOWNS = [
         {title: 'FAQ', route: '/infos'}
     ] },
     { title: 'Contact', route: '/contact'},
-    { title: 'Se connecter', route: '/compte'},
+    { title: 'Se connecter', route: '/compte'},,
+    { title: <img src={'/assets/cart.svg'} alt={'panier'}/> , route: '/panier'}
 ]
 const icon = '/assets/burger.svg';
 

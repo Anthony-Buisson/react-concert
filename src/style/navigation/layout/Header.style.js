@@ -23,7 +23,7 @@ export const Burger = styled.div`
     display: flex;
     height: auto;
   }
-  &:hover img, &:focus img{
+  &:hover > img, &:focus > img{
     animation-name: spin;
     animation-duration: 1s;
     @keyframes spin { 
@@ -36,7 +36,7 @@ export const Burger = styled.div`
     transform: rotate(360deg);
   }
   @media (min-width: 768px) {
-    & img {
+    & > img {
         display: none;
     }
   }

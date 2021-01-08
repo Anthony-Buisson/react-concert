@@ -23,7 +23,7 @@ export const HeaderLi = styled.li`
 export const HeaderLink = styled(Link)`
   color: black;
   text-decoration: none;
-  font-size: ${props => props.small ? '0.7em' : '1em'};
+  font-size: ${props => props.isSmall ? '0.7em' : '1em'};
   &:hover {
     color: rgba(0,0,0,0.7);
   }
