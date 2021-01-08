@@ -1,10 +1,10 @@
-import App from "../views/App";
+import Home from "../views/Home";
 import PostList  from "../components/posts/PostList";
 
 const routes = {
     home: {
         route: '/',
-        component: App
+        component: Home
     },
     posts: {
         route: '/posts',

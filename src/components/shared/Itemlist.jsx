@@ -1,25 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import DotLoader from "./DotLoader";
+import ErrorMessage from "./ErrorMessage";
 
 const ItemList = (props) => {
     const {apiRequest, renderItem, container} = props;
     const [items, setItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isError, setIsError] = useState(true);
     const ItemTag = renderItem;//capitalize for React
     const ContainerTag = container;
 
     async function fetch(){
-        const data = await apiRequest();
-        setItems(data);
+        try {
+            setIsLoading(true);
+            const data = await apiRequest();
+            setItems(data);
+            setIsError(false);
+        } catch(e){
+            setIsError(true);
+        } finally {
+            setIsLoading(false);
+        }
     }
     useEffect(()=>{
-        setTimeout(fetch, 3000);
+        fetch();
     }, [])
 
     let content;
-    if(items.length > 0){
-        content = items.map(i=><ItemTag item={i} />);
-    } else {
+    if(isLoading){
         content = <DotLoader />
+    }
+    else if (isError) {
+        content = <ErrorMessage message={'Erreur de récupération des données'} retry={fetch}/>
+    } else if(items.length > 0){
+        content = items.map(i=><ItemTag item={i} />);
     }
     return (
         <ContainerTag>
