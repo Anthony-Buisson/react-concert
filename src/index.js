@@ -5,11 +5,16 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { RootNavigator } from "./navigation/RootNavigator";
 import store from "./store/store";
+import Header from "./navigation/layout/Header";
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
+          <HashRouter>
+          <Header />
         <RootNavigator />
+          </HashRouter>
       </Provider>
   </React.StrictMode>,
   document.getElementById('root')

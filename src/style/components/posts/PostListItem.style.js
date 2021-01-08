@@ -18,5 +18,3 @@ export const Author = styled.h3`
   font-size: 0.8em;
   font-style: italic;
 `;
-
-
